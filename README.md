@@ -1,4 +1,4 @@
-# 🧠 Mutual Fund RAG Assistant (POC)
+# 🧠 Mutual Fund RAG Assistant
 
 **A Hackathon Project demonstrating how Retrieval-Augmented Generation (RAG) combined with a structured Knowledge Base (loaded from CSVs) can provide accurate and context-aware answers to complex questions about the mutual fund ecosystem.**
 
@@ -44,7 +44,7 @@ This project demonstrates a **Retrieval-Augmented Generation (RAG)** system enha
 
 ---
 
-## ✨ Key Features (POC)
+## ✨ Key Features
 
 *   **Data Loading from CSVs:** Loads knowledge base from structured `.csv` files using Pandas.
 *   **Pandas-Based Querying:** Retrieves data and simulates relationship lookups using Pandas DataFrames.
@@ -179,7 +179,3 @@ Try sample queries like:
 - [Shrish Agrawal / Team Member 4]
 
 ---
-
-## 📄 License
-
-[Add your license here if applicable]
