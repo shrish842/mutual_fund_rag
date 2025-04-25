@@ -55,19 +55,7 @@ This project demonstrates a **Retrieval-Augmented Generation (RAG)** system enha
 
 ---
 
-## 🔄 Core RAG Flow
 
-```mermaid
-flowchart TD
-    A[User Query] --> B[Intent Parser]
-    B --> C[Context Builder]
-    C --> D[Graph Query (Simulated)]
-    D --> C
-    C --> E[LLM Prompt Builder]
-    A --> E
-    E --> F[LLM (Gemini)]
-    F --> G[Display to User]
-```
 
 ---
 
