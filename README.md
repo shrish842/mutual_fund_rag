@@ -9,13 +9,10 @@
 *   [Problem Statement](#problem-statement)
 *   [Our Solution: Graph-Powered RAG with CSV Data](#our-solution-graph-powered-rag-with-csv-data)
 *   [Key Features](#key-features)
-*   [Core RAG Flow](#core-rag-flow)
 *   [Technology Stack](#technology-stack)
 *   [Project Structure](#project-structure)
 *   [Setup & Installation](#setup--installation)
 *   [Usage](#usage)
-*   [Limitations (POC)](#limitations-poc)
-*   [Future Work](#future-work)
 *   [Team](#team)
 
 ---
