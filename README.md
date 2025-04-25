@@ -58,15 +58,15 @@ This project demonstrates a **Retrieval-Augmented Generation (RAG)** system enha
 ## 🔄 Core RAG Flow
 
 ```mermaid
-graph LR
-    A[User Query] --> B{Intent Parser}
-    B -- Intent & Entities --> C{Context Builder}
-    C -- Query Specs --> D[Graph Query (Simulated)]
-    D -- Retrieved Data --> C
-    C -- Formatted Context --> E{LLM Prompt}
-    A -- Original Query --> E
-    E -- Augmented Prompt --> F[LLM (Gemini)]
-    F -- Grounded Answer --> G[Display to User]
+flowchart TD
+    A[User Query] --> B[Intent Parser]
+    B --> C[Context Builder]
+    C --> D[Graph Query (Simulated)]
+    D --> C
+    C --> E[LLM Prompt Builder]
+    A --> E
+    E --> F[LLM (Gemini)]
+    F --> G[Display to User]
 ```
 
 ---
@@ -196,9 +196,10 @@ Try sample queries like:
 
 ## 👥 Team
 
-- [Your Name / Team Member 1]
-- [Team Member 2]
-- ... (Add more if applicable)
+- [Deepali Gupta / Team Member 1]
+- [Unnati Gupta / Team Member 2]
+- [Udit Mishra / Team Member 3]
+- [Shrish Agrawal / Team Member 4]... (Add more if applicable)
 
 ---
 
