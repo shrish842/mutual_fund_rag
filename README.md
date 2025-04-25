@@ -187,7 +187,7 @@ Try sample queries like:
 - [Deepali Gupta / Team Member 1]
 - [Unnati Gupta / Team Member 2]
 - [Udit Mishra / Team Member 3]
-- [Shrish Agrawal / Team Member 4]... (Add more if applicable)
+- [Shrish Agrawal / Team Member 4]
 
 ---
 
