@@ -34,7 +34,7 @@ The Indian mutual fund landscape is vast and complex. Investors and advisors fac
 
 This project demonstrates a **Retrieval-Augmented Generation (RAG)** system enhanced by a structured **Knowledge Base** approach to address these challenges. The knowledge (entities and relationships) is loaded from **CSV files** using Pandas.
 
-1.  **Knowledge Representation:** We model entities (Funds, AMCs, Sectors, Factors) and their crucial relationships (`ManagedBy`, `InvestsIn`, `AffectedBy`) conceptually as a graph. *(In this POC, the data representing this graph structure is loaded from `.csv` files into Pandas DataFrames for processing)*.
+1.  **Knowledge Representation:** We model entities (Funds, AMCs, Sectors, Factors) and their crucial relationships (`ManagedBy`, `InvestsIn`, `AffectedBy`) conceptually as a graph. *(In this Project, the data representing this graph structure is loaded from `.csv` files into Pandas DataFrames for processing)*.
 2.  **RAG Pipeline:**
     *   **Retrieve:** When a user asks a question, we first query our knowledge base (the Pandas DataFrames) to find relevant entities *and* simulate relationship traversal using Pandas operations.
     *   **Augment:** The factual, structured information retrieved is formatted into a context snippet.
@@ -66,7 +66,7 @@ This project demonstrates a **Retrieval-Augmented Generation (RAG)** system enha
 - **LLM API:** Google Gemini API (`google-generativeai` library)  
 - **Environment Management:** `venv`  
 - **API Key Management:** `python-dotenv` (.env file)  
-- **Knowledge Base (POC):** Python Dictionaries  
+- **Knowledge Base :** Python Dictionaries  
 
 ---
 
