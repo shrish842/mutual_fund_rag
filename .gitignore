@@ -1,0 +1,33 @@
+# --- Python Virtual Environment ---
+# Ignore the virtual environment folder entirely
+venv/
+
+# --- Secrets ---
+# Ignore environment variables file containing API keys, etc.
+.env
+
+# --- Python Cache ---
+# Ignore Python bytecode files and cache folders
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# --- IDE/Editor Specific Files (Optional but good practice) ---
+# VS Code
+.vscode/
+# PyCharm
+.idea/
+
+# --- Operating System Files (Optional but good practice) ---
+# macOS
+.DS_Store
+# Windows
+Thumbs.db
+
+# --- Log Files (Optional - if you add logging) ---
+# *.log
+
+# --- Temporary Files (Optional) ---
+# *.tmp
+# *.swp
