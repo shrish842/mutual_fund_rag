@@ -13,6 +13,7 @@
 *   [Project Structure](#project-structure)
 *   [Setup & Installation](#setup--installation)
 *   [Usage](#usage)
+*   [Future Work](#future-work)
 *   [Team](#team)
 
 ---
