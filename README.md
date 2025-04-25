@@ -52,8 +52,6 @@ This project demonstrates a **Retrieval-Augmented Generation (RAG)** system enha
 *   **Relational Context Building:** Can find funds affected by factors directly or indirectly via sector links by joining/filtering DataFrames.
 *   **LLM Integration:** Uses Google Gemini API for natural language answer generation.
 *   **Contextual Answer Generation:** Provides answers based on retrieved knowledge, reducing hallucination.
-*   **(Optional) Basic Explainability:** Can provide simple reasoning for factor-fund relationships.
-*   **(Optional) Simple Visualization:** Includes a basic chart (e.g., funds by risk level) for certain queries.
 *   **Web Interface:** Simple UI built with Streamlit for interaction and demo purposes.
 
 ---
