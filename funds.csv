@@ -1,0 +1,5 @@
+fund_id,internal_key,name,amc_id,risk,primary_sector,description
+F001,FundA_Growth,FundA Growth,AMC_X,High,Technology,Aggressively invests in high-growth technology stocks and some finance.
+F002,FundB_Balanced,FundB Balanced,AMC_Y,Medium,Diversified,A balanced fund aiming for steady growth across various sectors.
+F003,FundC_Infra,FundC Infrastructure,AMC_X,Medium,Infrastructure,Focuses on companies involved in infrastructure development and related sectors like energy.
+F004,FundD_Energy,FundD Energy Focus,AMC_Z,High,Energy,"Concentrated investments in the energy sector, sensitive to oil prices."

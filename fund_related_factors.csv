@@ -1,0 +1,11 @@
+fund_id,factor_id
+F001,Interest Rates
+F001,Chip Shortage
+F002,Inflation
+F002,GDP Growth
+F003,Government Spending
+F003,Crude Oil Price
+F003,Interest Rates
+F004,Crude Oil Price
+F004,Geopolitical Tension
+F004,Renewable Policy

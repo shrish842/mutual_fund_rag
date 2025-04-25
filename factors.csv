@@ -1,0 +1,9 @@
+factor_id,name,description,impact_direction
+Crude Oil Price,Crude Oil Price,The global price of crude oil.,Varies
+Interest Rates,Interest Rates,Central bank policy rates.,"Rising rates often negative for growth stocks/tech, positive for banks."
+Inflation,Inflation,Rate of increase in prices.,"Affects consumer spending, input costs."
+GDP Growth,GDP Growth,Overall economic growth.,Positive for most sectors.
+Chip Shortage,Chip Shortage,Supply constraint for semiconductors.,"Negative for users, positive for producers."
+Government Spending,Government Spending,"Public expenditure, especially on infrastructure.",Positive for related sectors.
+Geopolitical Tension,Geopolitical Tension,International conflicts or instability.,"Often drives oil prices, uncertainty."
+Renewable Policy,Renewable Policy,Government policies favouring renewable energy.,"Positive for renewables, potentially negative for fossil fuels."

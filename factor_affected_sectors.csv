@@ -1,0 +1,18 @@
+factor_id,sector_id
+Crude Oil Price,Energy
+Crude Oil Price,Chemicals
+Crude Oil Price,Infrastructure
+Crude Oil Price,Consumer Goods
+Interest Rates,Technology
+Interest Rates,Finance
+Interest Rates,Infrastructure
+Inflation,Consumer Goods
+Inflation,Diversified
+GDP Growth,Diversified
+GDP Growth,Finance
+Chip Shortage,Technology
+Chip Shortage,Automotive
+Government Spending,Infrastructure
+Government Spending,Construction Materials
+Geopolitical Tension,Energy
+Renewable Policy,Energy

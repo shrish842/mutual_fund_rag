@@ -1,0 +1,10 @@
+sector_id,name,description,sensitivity_notes
+Technology,Technology,"Companies involved in software, hardware, internet services.","Sensitive to interest rates, innovation cycles."
+Finance,Finance,"Banks, insurance companies, financial services.","Sensitive to interest rates, regulations."
+Healthcare,Healthcare,"Pharmaceuticals, hospitals, medical devices.","Sensitive to regulations, R&D success."
+Infrastructure,Infrastructure,"Construction, utilities, transportation infrastructure.","Sensitive to government spending, interest rates, commodity prices (like oil for transport)."
+Energy,Energy,"Oil & gas exploration, production, refineries, power generation.","Highly sensitive to Crude Oil Price, geopolitical events, environmental regulations."
+Consumer Goods,Consumer Goods,Companies making everyday products.,"Sensitive to inflation, consumer spending."
+Construction Materials,Construction Materials,"Cement, steel for construction.","Sensitive to infrastructure spending, housing market."
+Chemicals,Chemicals,Industrial and specialty chemicals.,"Sensitive to Crude Oil Price (feedstock), industrial demand."
+Diversified,Diversified,"Invests across many sectors, no single dominant one.",Reflects broad market trends.
