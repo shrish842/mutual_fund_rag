@@ -6,17 +6,17 @@
 
 ## 📝 Table of Contents
 
-- [Problem Statement](#-problem-statement)
-- [Our Solution: Graph-Powered RAG](#-our-solution-graph-powered-rag)
-- [Key Features](#-key-features)
-- [Core RAG Flow](#-core-rag-flow)
-- [Technology Stack](#️-technology-stack)
-- [Project Structure](#-project-structure)
-- [Setup & Installation](#-setup--installation)
-- [Usage](#️-usage)
-- [Limitations (POC)](#-limitations-poc)
-- [Future Work](#-future-work)
-- [Team](#-team)
+- [Problem Statement](#problem-statement)
+- [Our Solution: Graph-Powered RAG](#our-solution-graph-powered-rag)
+- [Key Features](#key-features)
+- [Core RAG Flow](#core-rag-flow)
+- [Technology Stack](#technology-stack)
+- [Project Structure](#project-structure)
+- [Setup & Installation](#setup--installation)
+- [Usage](#usage)
+- [Limitations (POC)](#limitations-poc)
+- [Future Work](#future-work)
+- [Team](#team)
 
 ---
 
@@ -36,9 +36,9 @@ This project demonstrates a **Retrieval-Augmented Generation (RAG)** system enha
 
 1. **Knowledge Representation:** We model entities (Funds, AMCs, Sectors, Factors) and their crucial relationships (`ManagedBy`, `InvestsIn`, `AffectedBy`) conceptually as a graph. *(In this POC, this graph is simulated using Python dictionaries for rapid development)*.
 2. **RAG Pipeline:**
-   - **Retrieve:** When a user asks a question, we first query our knowledge base (the simulated graph) to find relevant entities *and* their connections.
-   - **Augment:** The factual, structured information retrieved from the graph is formatted into a context snippet.
-   - **Generate:** This context, along with the original query, is fed to a powerful Large Language Model (Google Gemini). The LLM is instructed to generate an answer based *only* on the provided factual context.
+    - **Retrieve:** When a user asks a question, we first query our knowledge base (the simulated graph) to find relevant entities *and* their connections.
+    - **Augment:** The factual, structured information retrieved from the graph is formatted into a context snippet.
+    - **Generate:** This context, along with the original query, is fed to a powerful Large Language Model (Google Gemini). The LLM is instructed to generate an answer based *only* on the provided factual context.
 
 **The Result:** Answers are grounded in specific data, are more reliable, and can address complex relational queries that generic models struggle with.
 
@@ -59,11 +59,149 @@ This project demonstrates a **Retrieval-Augmented Generation (RAG)** system enha
 
 ```mermaid
 graph LR
-    A[User Query] --> B{Intent Parser};
-    B -- Intent & Entities --> C{Context Builder};
-    C -- Query Specs --> D[Graph Query (Simulated)];
-    D -- Retrieved Data --> C;
-    C -- Formatted Context --> E{LLM Prompt};
-    A -- Original Query --> E;
-    E -- Augmented Prompt --> F[LLM (Gemini)];
-    F -- Grounded Answer --> G[Display to User];
+    A[User Query] --> B{Intent Parser}
+    B -- Intent & Entities --> C{Context Builder}
+    C -- Query Specs --> D[Graph Query (Simulated)]
+    D -- Retrieved Data --> C
+    C -- Formatted Context --> E{LLM Prompt}
+    A -- Original Query --> E
+    E -- Augmented Prompt --> F[LLM (Gemini)]
+    F -- Grounded Answer --> G[Display to User]
+```
+
+---
+
+## ⚙️ Technology Stack
+
+- **Backend/Core Logic:** Python 3.x  
+- **Web Framework:** Streamlit (for rapid UI development)  
+- **LLM API:** Google Gemini API (`google-generativeai` library)  
+- **Environment Management:** `venv`  
+- **API Key Management:** `python-dotenv` (.env file)  
+- **Knowledge Base (POC):** Python Dictionaries  
+
+---
+
+## 📁 Project Structure
+
+```
+mutual_fund_rag/
+├── venv/                     # Virtual environment files (Ignored by Git)
+├── .env                      # Stores secret API keys (MUST NOT be committed)
+├── .gitignore                # Specifies files/folders for Git to ignore
+├── app.py                    # Main Streamlit application script
+├── context_builder.py        # Logic to format retrieved data for LLM context
+├── graph_query.py            # Functions to query the simulated knowledge graph
+├── intent_parser.py          # Basic logic to understand user input
+├── knowledge_base.py         # Hardcoded data simulating the graph
+├── llm_handler.py            # Handles interaction with the Google Gemini API
+└── requirements.txt          # Lists project dependencies
+```
+
+---
+
+## 🚀 Setup & Installation
+
+### 1. Clone the Repository
+
+```bash
+# Replace <your-repo-url> with the actual URL from GitHub
+git clone <your-repo-url>
+cd mutual-fund-rag
+```
+
+### 2. Create and Activate Virtual Environment
+
+```bash
+# Create the environment:
+python -m venv venv
+
+# Activate the environment:
+# Windows:
+venv\Scripts\activate
+
+# macOS/Linux:
+source venv/bin/activate
+```
+
+### 3. Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### 4. Set Up API Key
+
+Create a `.env` file in the root project directory:
+
+```dotenv
+GOOGLE_API_KEY=YOUR_ACTUAL_GOOGLE_API_KEY_HERE
+```
+
+✅ **Make sure `.env` is in `.gitignore`**
+
+---
+
+## ▶️ Usage
+
+1. **Activate the virtual environment:**
+
+```bash
+# Windows:
+venv\Scripts\activate
+
+# macOS/Linux:
+source venv/bin/activate
+```
+
+2. **Run the Streamlit app:**
+
+```bash
+streamlit run app.py
+```
+
+3. **Open in Browser:**  
+Visit `http://localhost:8501` (Streamlit will show the URL in the terminal).
+
+4. **Interact with the App:**
+
+Try sample queries like:
+
+- `Tell me about FundC Infrastructure`
+- `Which funds are affected by Crude Oil Price?`
+- `What funds does AMC_X manage?`
+
+---
+
+## ⚠️ Limitations (POC)
+
+- **Simulated Knowledge:** Uses a small, hardcoded dataset.
+- **Basic Parsing:** Relies on keyword matching for intent detection.
+- **No Real Graph Database:** Uses Python dictionaries (not scalable).
+- **Limited Entity Types:** Only Funds, AMCs, Sectors, and Factors modeled.
+- **Static:** No real-time updates.
+
+---
+
+## 🌱 Future Work
+
+- **Real Data Integration:** AMFI, SEBI, financial APIs.
+- **Graph Database Backend:** Neo4j, TigerGraph, or AWS Neptune.
+- **Advanced NLP/NLU:** spaCy, transformers, or custom LLM fine-tuning.
+- **Expanded Schema:** Include fund managers, news articles, stocks, and more.
+- **Context Explainability:** Visualize reasoning and graph path.
+- **Advanced Tools:** Personalized portfolios, what-if analysis, risk models.
+
+---
+
+## 👥 Team
+
+- [Your Name / Team Member 1]
+- [Team Member 2]
+- ... (Add more if applicable)
+
+---
+
+## 📄 License
+
+[Add your license here if applicable]
